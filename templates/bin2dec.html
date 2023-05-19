@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Binary to Decimal Converter</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="input-form">
+                <input type="text" id="binary-input" name="binary" placeholder="Enter a binary number">
+            </div>
+    
+            <div class="output" id="decimal-output">
+                {% if dec %}
+                    {{ dec }}
+                {% endif %}
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                $('#binary-input').on('input', function() {
+                    var binary = $(this).val();
+                    
+                    $.ajax({
+                        url: '/bin2dec',
+                        type: 'POST',
+                        data: { binary: binary },
+                        success: function(response) {
+                            $('#decimal-output').html(response.dec);
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
