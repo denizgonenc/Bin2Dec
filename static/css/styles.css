@@ -8,7 +8,7 @@
 }
 
 .input-form {
-    height: 5vh;
+    height: 7vh;
 }
 
 input {
@@ -27,5 +27,5 @@ input:focus {
 
 .output {
     padding: 5px 5px 5px 5px;
-    height: 5vh;
+    height: 3vh;
 }
