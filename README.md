@@ -1,6 +1,8 @@
 # Bin2Dec
 Convert binary numbers to decimal using Python, AJAX and Flask.
 
+![demo](bin2dec.gif)
+
 # How to use
 1. In the directory of the repository, start the Flask server by running the following command:
     ```python 
